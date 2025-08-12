@@ -1,0 +1,15 @@
+import DataUriParser from "datauri/parser.js"
+import path from 'path'
+
+const bufferGenerator = (file) => {
+    const parser = new DataUriParser()
+
+    const extName = path.extname(file.originalname).toString();
+
+    return parser.format(extName, file.buffer);
+}
+
+export default bufferGenerator;
+
+
+//files (like images or PDFs) into base64-encoded Data URIs 
