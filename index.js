@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
     res.send("He;;;o");
 })
 
-const port = process.env.port;
+const port = process.env.PORT;
 
 
 import userRouter from "./routes/user.js"
