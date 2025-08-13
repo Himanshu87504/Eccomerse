@@ -5,6 +5,7 @@ import sendOtp from "../utils/sendOtp.js";
 import jwt from "jsonwebtoken";
 
 export const loginUser = TryCatch(async (req, res) => {
+    console.log("Hello");
     const { email } = req.body;
 
     const subject = "Ecommerce App";
