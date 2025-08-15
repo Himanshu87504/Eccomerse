@@ -8,15 +8,15 @@ export const isAuth = async (req, res, next) => {
 
         console.log("Token 1" + token1);
 
-        const token = req.cookies.token;
-        console.log("Token ", token);
+        //const token = req.cookies.token;
+        //console.log("Token ", token);
 
-        if (!token)
+        if (!token1)
             return res.status(403).json({
                 message: "Please Login",
             });
 
-        const decodedData = jwt.verify(token, process.env.Jwt_Sec);
+        const decodedData = jwt.verify(token1, process.env.Jwt_Sec);
 
         req.user = await User.findById(decodedData._id);
 
@@ -25,7 +25,7 @@ export const isAuth = async (req, res, next) => {
         const token = req.headers.token;
         console.log("hello", token);
         res.status(500).json({
-            message: "Login First--",
+            message: "Login First",
         });
     }
 };
