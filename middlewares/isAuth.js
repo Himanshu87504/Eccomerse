@@ -6,7 +6,7 @@ export const isAuth = async (req, res, next) => {
 
         const token1 = req.headers.token;
 
-        console.log("Token 1" + token);
+        console.log("Token 1" + token1);
 
         const token = req.cookies.token;
         console.log("Token ", token);
