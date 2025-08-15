@@ -22,8 +22,9 @@ export const isAuth = async (req, res, next) => {
 
         next();
     } catch (error) {
-        const token = req.headers.token;
-        console.log("hello", token);
+        //const token = req.headers.token;
+        //console.log("hello", token);
+        console.log("error login firtt",error);
         res.status(500).json({
             message: "# Login First",
         });
